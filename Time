@@ -56,7 +56,9 @@ override_utf8_locale yes
 color1 A2C66E
 color2 C7C7C7
 #color3 CC1215
-color3 138F50
+## Dark Green
+##color3 138F50
+color3 7CA642
 color4 D6D6D8
 color5 CB1215
 color6 7CA642
