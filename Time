@@ -1,0 +1,111 @@
+background yes
+use_xft yes
+xftfont Roboto:size=9
+xftalpha 0.8
+update_interval 0.7
+update_interval_on_battery 1.5
+total_run_times 0
+own_window yes
+own_window_transparent yes
+##############################################
+# Compositing tips:
+# Conky can play strangely when used with
+# different compositors. I have found the
+# following to work well, but your mileage
+# may vary. Comment/uncomment to suit.
+##############################################
+## no compositor
+#own_window_type override
+#own_window_argb_visual no
+
+## xcompmgr
+#own_window_type override
+#own_window_argb_visual yes
+
+## cairo-compmgr
+own_window_type desktop
+own_window_argb_visual yes
+##############################################
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+draw_shades yes
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+stippled_borders 0
+border_margin 5
+border_width 1
+default_color 000000
+default_shade_color 000000
+default_outline_color 000000
+## alignment br
+minimum_size 450
+maximum_width 330
+gap_x 30
+gap_y -100
+alignment mr
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+net_avg_samples 2
+short_units yes
+text_buffer_size 2048
+use_spacer none
+override_utf8_locale yes
+#color1 C7C7C7
+color1 A2C66E
+color2 C7C7C7
+#color3 CC1215
+color3 138F50
+color4 D6D6D8
+color5 CB1215
+color6 7CA642
+##############################################
+#  Output
+##############################################
+TEXT
+${color4}${font Pincoyablack:size=65}${time %H}${color4}${font Pincoyablack:weight=Thin:size=65}:${time %M}${font}
+${color6}${font Pincoyablack:size=30}${voffset -65}${offset 170}${time %A}${font}
+${font Pincoyablack:weight=Light:size=30}${voffset 0}${offset 170}${time %d %B %Y}${font}${color2}
+${color4}$hr
+#System and battery
+${color4}${font Bauhaus:size=18}System${color2}
+${font StyleBats:size=16}i ${font Bauhaus:size=15}Cpu: ${if_match ${cpu cpu0} < 80}${color3}${else}${color5}${endif}${cpu cpu0}%${color2}
+${font StyleBats:size=13}g${font Bauhaus:size=15}  RAM: ${if_match ${memperc} < 70}${color3}${else}${color5}${endif}$memperc% ${color2}
+${font Webdings:size=13}~${font Bauhaus:size=15}  Batt: ${if_match ${battery_percent BAT0} > 25}${color3}${else}${color5}${endif}${battery_percent BAT0}%${color2}
+# GPU
+${voffset -88}${offset 160}${font Bauhaus:size=18}${color4}Graphics${color2}
+${offset 160}${font StyleBats:size=13}n ${font Bauhaus:size=15} Freq   : ${if_match ${nvidia gpufreq} < 1000}${color3}${else}${color5}${endif}${nvidia gpufreq}${color2}
+${offset 160}${font StyleBats:size=13}1 ${font Bauhaus:size=15} Temp  : ${if_match ${nvidia temp} < 65}${color3}${else}${color5}${endif}${nvidia temp}
+${offset 160}${color2}${font StyleBats:size=14}h ${font Bauhaus:size=13} Mem Freq : ${if_match ${nvidia memfreq} < 800}${color3}${else}${color5}${endif}${nvidia memfreq}
+${color4}$hr
+${color4}${font Pincoyablack:size=30}Hey Rick! This is ${color5}${user_names}!
+# CPU Stats
+${color2}${font Tlwg Mono:size=14}CPU Usage${color4}$hr
+${font Bauhaus:size=12}${color4}CPU 1:${offset 120}${font Bauhaus:size=12}${color4}CPU 2:
+${if_match ${cpu cpu0} < 80}${color6}${else}${color5}${endif}${cpubar cpu0 18,160} ${if_match ${cpu cpu1} < 80}${color6}${else}${color5}${endif}${cpubar cpu1 18,160}
+${font Bauhaus:size=12}${color4}CPU 3:${offset 120}${font Bauhaus:size=12}${color4}CPU 4:
+${if_match ${cpu cpu2} < 80}${color6}${else}${color5}${endif}${cpubar cpu2 18,160} ${if_match ${cpu cpu3} < 80}${color6}${else}${color5}${endif}${cpubar cpu3 18,160}
+##${font Bauhaus:size=12}${color4}Battery : 
+##${color6}${battery_bar 18}
+##${font Bauhaus:size=12}${color4}Free Space :
+##${color6}${fs_bar_free 18}
+##${font Bauhaus:size=12}${color4}Swap :
+##${color6}${swapbar}
+##${color4}Up Speed: 
+##${color6}${upspeedgraph}
+##${color4}Down Speed: 
+##${color6}${upspeedgraph}
+${color2}${font Tlwg Mono:size=14}Filesystem${color4}$hr
+${font Bauhaus:size=12}${color4}Root:
+${color6}${diskiograph /dev/sda5}
+${font Bauhaus:size=12}${color4}Home:
+${color6}${diskiograph /dev/sda6}
+
+# Others
+${color2}${font Tlwg Mono:size=14}Others${color4}$hr
+${color4}${font Bauhaus:size=16}Uptime: ${color2}${font Tlwg Mono:size=14}${uptime}
+${color4}${font Bauhaus:size=16}Running Threads: ${color2}${font Tlwg Mono:size=14}${running_threads}
+${color4}${font Bauhaus:size=16}Kernel Ver: ${color2}${font Tlwg Mono:size=14}${kernel}
+${color2}${font Tlwg Mono:size=14}${color4}$hr
+${font Pincoyablack:size=16}Conky Customised By SS7
