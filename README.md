@@ -1,4 +1,4 @@
-## Neat Conky By SS7
+## Neat Conky
 
 Neat, Rick & Morty based conky theme for your Linux desktop.
 See quick preview - preview.png
