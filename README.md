@@ -1,6 +1,18 @@
 ## Neat Conky By SS7
 
 Neat, Rick & Morty based conky theme for your Linux desktop.
+See quick preview - preview.png
+
+### Features:
+   * The center line is: Hey Rick This is {username logged in}!
+
+   * All the stats including graphs, except for Filesystem and Others turn red when usage is too high. Example Image
+
+   * Live feeds from Reuters RSS feed.
+
+   * The last line(signature) gets replaced by Battery Low warning when battery is less than 15%.
+
+   * Signature is read from file called signature.txt modify it to edit the last line of theme.
 
 Currently works with nvidia graphics card only. I am trying to add intel as well. I dont have AMD so cant be sure If I did it correctly so I wish I could get some help. Contributers are welcomed.
 
