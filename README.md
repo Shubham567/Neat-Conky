@@ -13,6 +13,3 @@ It refreshes once every 10 min. You can change the refresh rate by editing "Time
 
 
 Customization of Jesse Time Conky theme. But I think I added too much to call it just a customization now.
-
-
-
