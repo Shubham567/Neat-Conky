@@ -1,9 +1,9 @@
-background yes
+background no
 use_xft yes
 xftfont Roboto:size=9
 xftalpha 0.8
-update_interval 0.4
-update_interval_on_battery 1.5
+update_interval 0.5
+update_interval_on_battery 2.5
 total_run_times 0
 own_window yes
 own_window_transparent yes
@@ -33,13 +33,13 @@ draw_outline no
 draw_borders no
 draw_graph_borders no
 stippled_borders 0
-border_margin 5
+border_margin 10
 border_width 1
 default_color 000000
 default_shade_color 000000
 default_outline_color 000000
 minimum_size 450
-maximum_width 380
+maximum_width 390
 gap_x 30
 gap_y -95
 alignment ml
@@ -109,5 +109,5 @@ ${font StyleBats:size=9}V ${font Ubuntu:size=8}${rss http://feeds.reuters.com/Re
 ${font StyleBats:size=9}V ${font Ubuntu:size=8}${rss http://feeds.reuters.com/Reuters/worldNews 15 item_title 5}
 ${color2}${font Tlwg Mono:size=14}${color4}$hr
 ## If battery not low then show first line of signature.txt
-${if_match ${battery_percent BAT0} < 15}${color5}${font Computerfont:size=18}${blink Battery Critically Low!}${else}${font Pincoyablack:size=20}${color6}${head signature.txt 1 600}${endif}
-
+${if_match ${battery_percent BAT0} < 16}${color5}${font Computerfont:size=18}${blink Battery Critically Low!}${else}${font Pincoyablack:size=20}${color6}${head signature.txt 1 600}${endif}
+##${if_match ${battery_percent BAT0} > 15}${blink ${image dickFury.jpg -p 310,504 -s 70x90 -f 600}}${endif}
