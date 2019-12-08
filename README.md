@@ -1,6 +1,8 @@
 ## Neat Conky By SS7
 
-Works with nvidia graphics card only. As conky only supports nvidia. 
+Neat, Rick & Morty based conky theme for your Linux desktop.
+
+Currently works with nvidia graphics card only. I am trying to add intel as well. I dont have AMD so cant be sure If I did it correctly so I wish I could get some help. Contributers are welcomed.
 
 Sorry for putting my signature in there at last. Couldnt come up with an ending line. Hope you will do better. You can change it by editing signature.txt.
 
