@@ -14,7 +14,7 @@ See quick preview - preview.png
 
    * Signature is read from file called signature.txt modify it to edit the last line of theme.
 
-Currently works with nvidia graphics card only. I am trying to add intel as well. I dont have AMD so cant be sure If I did it correctly so I wish I could get some help. Contributers are welcomed.
+Currently works with nvidia graphics card only. I am trying to add Intel as well. I dont have AMD so cant be sure If I did it correctly so I wish I could get some help. Contributers are welcomed.
 
 Sorry for putting my signature in there at last. Couldnt come up with an ending line. Hope you will do better. You can change it by editing signature.txt.
 
