@@ -24,4 +24,4 @@ To change it simply put a text you want to show. You can use your script to gene
 It refreshes once every 10 min. You can change the refresh rate by editing "Time" file.
 
 
-Customization of Jesse Time Conky theme. But I think I added too much to call it just a customization now.
+##### Customization of Jesse Time Conky theme. But I think I added too much to call it just a customization now.
