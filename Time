@@ -41,8 +41,8 @@ default_outline_color 000000
 minimum_size 450
 maximum_width 380
 gap_x 30
-gap_y -220
-alignment l
+gap_y -95
+alignment ml
 no_buffers yes
 uppercase no
 cpu_avg_samples 2
@@ -96,10 +96,11 @@ ${color6}${diskiograph /dev/sda5 30,185}   ${color6}${diskiograph /dev/sda6 30,1
 # Others
 ${color2}${font Tlwg Mono:size=14}Others${color4}$hr
 ${color4}${font Bauhaus:size=16}Uptime: ${color2}${font Tlwg Mono:size=14}${uptime}
-## ${color4}${font Bauhaus:size=16}HD Temp: ${color2}${font Tlwg Mono:size=14}${downspeedf eth0}
 ${color4}${font Bauhaus:size=16}Running Threads: ${color2}${font Tlwg Mono:size=14}${running_threads}
+## ${color4}${font Bauhaus:size=16}HD Temp: ${color2}${font Tlwg Mono:size=14}${downspeedf eth0}
 ##${color4}${font Bauhaus:size=16}Image Quality: ${color2}${font Tlwg Mono:size=14}${nvidia imagequality}
-##${color4}${font Bauhaus:size=16}Kernel Ver: ${color2}${font Tlwg Mono:size=14}${kernel}
+${color4}${font Bauhaus:size=16}Kernel Ver: ${color2}${font Tlwg Mono:size=14}${kernel}
+## Reuters World news Rss feed
 ${color2}${font Tlwg Mono:size=14}${rss http://feeds.reuters.com/Reuters/worldNews 60 feed_title}${color4}$hr
 ${font StyleBats:size=9}V ${font Ubuntu:size=8}${rss http://feeds.reuters.com/Reuters/worldNews 15 item_title 1}
 ${font StyleBats:size=9}V ${font Ubuntu:size=8}${rss http://feeds.reuters.com/Reuters/worldNews 15 item_title 2}
@@ -107,7 +108,6 @@ ${font StyleBats:size=9}V ${font Ubuntu:size=8}${rss http://feeds.reuters.com/Re
 ${font StyleBats:size=9}V ${font Ubuntu:size=8}${rss http://feeds.reuters.com/Reuters/worldNews 15 item_title 4}
 ${font StyleBats:size=9}V ${font Ubuntu:size=8}${rss http://feeds.reuters.com/Reuters/worldNews 15 item_title 5}
 ${color2}${font Tlwg Mono:size=14}${color4}$hr
-${if_match ${battery_percent BAT0} < 15}${color5}${font Computerfont:size=18}${blink Battery Critically Low!}${else}${font Pincoyablack:size=20}${color6}Neat  --  A Conky Customization By SS7${endif}
-
-
+## If battery not low then show first line of signature.txt
+${if_match ${battery_percent BAT0} < 15}${color5}${font Computerfont:size=18}${blink Battery Critically Low!}${else}${font Pincoyablack:size=20}${color6}${head signature.txt 1 600}${endif}
 
