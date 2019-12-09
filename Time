@@ -39,9 +39,9 @@ default_color 000000
 default_shade_color 000000
 default_outline_color 000000
 minimum_size 450
-maximum_width 390
-gap_x 30
-gap_y -95
+maximum_width 400
+gap_x 20
+gap_y -85
 alignment ml
 no_buffers yes
 uppercase no
@@ -68,7 +68,7 @@ color7 C0D343
 TEXT
 ${color4}${font Pincoyablack:size=65}${time %H}${color4}${font Pincoyablack:weight=Thin:size=65}:${time %M}${font}
 ${color6}${font Pincoyablack:size=30}${voffset -65}${offset 170}${time %A}${font}
-${font Pincoyablack:weight=Light:size=30}${voffset 0}${offset 170}${time %d %B %Y}${font}${color2}
+${font Pincoyablack:weight=Light:size=30}${voffset 0}${offset 170}${time %d %B}${font}${color2}
 ${color4}$hr
 #System and battery
 ${color4}${font Bauhaus:size=18}System${color2}
@@ -92,14 +92,14 @@ ${font Bauhaus:size=12}${color4}RAM: ${if_match ${memperc} < 70}${color6}${else}
 ##Filesystem
 ${color2}${font Tlwg Mono:size=14}Filesystem${color4}$hr
 ${font Bauhaus:size=12}${color4}Root:${offset 160}${font Bauhaus:size=12}${color4}Home:
-${color6}${diskiograph /dev/sda5 30,185}   ${color6}${diskiograph /dev/sda6 30,185}
+${color6}${diskiograph /dev/sda5 24,185}   ${color6}${diskiograph /dev/sda6 24,185}
 # Others
 ${color2}${font Tlwg Mono:size=14}Others${color4}$hr
 ${color4}${font Bauhaus:size=16}Uptime: ${color2}${font Tlwg Mono:size=14}${uptime}
 ${color4}${font Bauhaus:size=16}Running Threads: ${color2}${font Tlwg Mono:size=14}${running_threads}
 ## ${color4}${font Bauhaus:size=16}HD Temp: ${color2}${font Tlwg Mono:size=14}${downspeedf eth0}
 ##${color4}${font Bauhaus:size=16}Image Quality: ${color2}${font Tlwg Mono:size=14}${nvidia imagequality}
-${color4}${font Bauhaus:size=16}Kernel Ver: ${color2}${font Tlwg Mono:size=14}${kernel}
+##${color4}${font Bauhaus:size=16}Kernel Ver: ${color2}${font Tlwg Mono:size=14}${kernel}
 ## Reuters World news Rss feed
 ${color2}${font Tlwg Mono:size=14}${rss http://feeds.reuters.com/Reuters/worldNews 60 feed_title}${color4}$hr
 ${font StyleBats:size=9}V ${font Ubuntu:size=8}${rss http://feeds.reuters.com/Reuters/worldNews 15 item_title 1}
@@ -108,6 +108,9 @@ ${font StyleBats:size=9}V ${font Ubuntu:size=8}${rss http://feeds.reuters.com/Re
 ${font StyleBats:size=9}V ${font Ubuntu:size=8}${rss http://feeds.reuters.com/Reuters/worldNews 15 item_title 4}
 ${font StyleBats:size=9}V ${font Ubuntu:size=8}${rss http://feeds.reuters.com/Reuters/worldNews 15 item_title 5}
 ${color2}${font Tlwg Mono:size=14}${color4}$hr
-## If battery not low then show first line of signature.txt
-${if_match ${battery_percent BAT0} < 16}${color5}${font Computerfont:size=18}${blink Battery Critically Low!}${else}${font Pincoyablack:size=20}${color6}${head signature.txt 1 600}${endif}
+## If battery not low then show first line of signature.txt . Uncomment to show
+##${if_match ${battery_percent BAT0} < 16}${color5}${font Computerfont:size=18}${blink Battery Critically Low!}${else}${font Pincoyablack:size=20}${color6}${head signature.txt 1 600}${endif}
+## Uncomment to show an blinking image
 ##${if_match ${battery_percent BAT0} > 15}${blink ${image dickFury.jpg -p 310,504 -s 70x90 -f 600}}${endif}
+## Shows random computer science quote to replace the signature section
+${if_match ${battery_percent BAT0} < 16}${color5}${font Computerfont:size=18}${blink Battery Critically Low!}${else}${font Courier 10 Pitch:size=9}${color6}${voffset -10}${execi 600 python3 arandomQuote.py}${endif}

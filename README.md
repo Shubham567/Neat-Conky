@@ -3,6 +3,11 @@
 Neat, Rick & Morty based conky theme for your Linux desktop.
 See quick preview - preview.png
 
+### Update :
+*   Replaced signature to show a random computer science        quote from a pool of 350 quote updates once every 10        mins. Requires python3 installed.
+*   Reduced refresh rate by 0.1 sec. Now updates twice          every second.
+
+
 ### Features:
    * The center line is: Hey Rick This is {username logged in}!
 
@@ -13,6 +18,9 @@ See quick preview - preview.png
    * The last line(signature) gets replaced by Battery Low warning when battery is less than 15%.
 
    * Signature is read from file called signature.txt modify it to edit the last line of theme.
+
+   * Signature section is now modified to show a random quote.
+
 
 Currently works with nvidia graphics card only. I am trying to add Intel as well. I dont have AMD so cant be sure If I did it correctly so I wish I could get some help. Contributers are welcomed.
 
