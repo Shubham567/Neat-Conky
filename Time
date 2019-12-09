@@ -83,7 +83,7 @@ ${offset 210}${color2}${font StyleBats:size=14}h ${font Bauhaus:size=13} Mem Fre
 ${color4}$hr
 ${color4}${font Pincoyablack:size=30}Hey Rick! This is ${color5}${user_names}!
 #CPu and Ram
-${color2}${font Tlwg Mono:size=14}CPU & RAM Usage${color4}$hr
+${voffset -20}${color2}${font Tlwg Mono:size=14}CPU & RAM Usage${color4}$hr
 ${font Bauhaus:size=12}${color4}CPU 1: ${offset 150}${font Bauhaus:size=12}${color4}CPU 2:
 ${if_match ${cpu cpu0} < 80}${color6}${else}${color5}${endif}${cpugraph cpu0 18,180}    ${if_match ${cpu cpu1} < 80}${color6}${else}${color5}${endif}${cpugraph cpu1 18,180}
 ${font Bauhaus:size=12}${color4}CPU 3: ${offset 150}${font Bauhaus:size=12}${color4}CPU 4:
