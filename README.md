@@ -1,7 +1,7 @@
 ## C137 Rick & Morty Neat Conky
 
 Neat, Rick & Morty based conky theme for your Linux desktop.
-See quick preview - preview.png
+See quick preview below
 
 ![Neat conky preview c137 rick & morty](./preview.png)
 
