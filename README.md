@@ -1,7 +1,9 @@
 ## C137 Rick & Morty "Neat" For: Linux -> Conky & Wallpaper Engine -> [Windows](https://steamcommunity.com/sharedfiles/filedetails/?id=2828268772)
 
 Neat, Rick & Morty based conky theme for your Linux desktop.
+
 If you are looking for Windows Editon [click here](https://steamcommunity.com/sharedfiles/filedetails/?id=2828268772).
+
 See quick preview below
 
 ![Neat conky preview c137 rick & morty](./preview.png)
